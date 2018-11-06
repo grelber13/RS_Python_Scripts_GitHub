@@ -77,13 +77,9 @@ regional_35_counties = [
 # determine which folders to look for Batch files in, which will be used for
 # the rest of the process. This parameter will be overwritten if
 # run_script_as_tool = True.
-cluster_list = regional_35_counties
-    #[
-     #r'R:\Nat_Hybrid_Poultry\Remote_Sensing\Feature_Analyst\Mississippi\BatchGDB_MS_Z16_c2.gdb',
-     #r'R:\Nat_Hybrid_Poultry\Remote_Sensing\Feature_Analyst\North_Carolina\BatchGDB_NC_Z17_c1.gdb',
-     #r'R:\Nat_Hybrid_Poultry\Remote_Sensing\Feature_Analyst\North_Carolina\BatchGDB_NC_Z18_c5.gdb',
-     #r'R:\Nat_Hybrid_Poultry\Remote_Sensing\Feature_Analyst\Tennessee\BatchGDB_TN_Z16_c1.gdb',
-    #]
+cluster_list = [
+    r'R:\Nat_Hybrid_Poultry\Remote_Sensing\Feature_Analyst\Alabama\BatchTestGDB_AL_Z16_c1.gdb',
+    ]
     
 # Specify the location of probability surface raster and the threshold.
 prob_surface_raster = r'N:\FLAPS from Chris Burdett\Data\poultry_prob_surface\poultryMskNrm\poultryMskNrm.tif'
@@ -95,12 +91,12 @@ county_outline_folder = r'N:\Remote Sensing Projects\2016 Cooperative Agreement 
 # Specify the location of the adjusted NASS values CSV.  Make sure to double
 # check that the read_adjFLAPS function to ensure it is reading the proper 
 # column.
-adjFLAPS_CSV = r'R:\Nat_Hybrid_Poultry\Documents\adjFLAPS_FINAL_CSV.csv'
+adjFLAPS_CSV = r'R:\Nat_Hybrid_Poultry\Documents\adjNASS_PRACTICE_CSV.csv'
 
 # Specify the location of the CSV file where the script will track which
 # counties have been completed.  If no file is present at this location,
 #  the script will create a new blank file and begin to fill it.
-progress_tracking_file = r'R:\Nat_Hybrid_Poultry\Documents\trackingFileCSV.csv'
+progress_tracking_file = r'R:\Nat_Hybrid_Poultry\Documents\trackingFileCSV_PRACTICE.csv'
 
 # MASKING: It is important to define if the masks that will be used. If you
 # don't want any masks, set either (or both) of these parameters = []. 
@@ -140,7 +136,7 @@ AR_min_threshold = None
 
 # Define num_iterations. Any number >1 will result multiple several iterations
 # of the simualtedSampling and project functions, with a unique file for each.
-num_iterations = 10
+num_iterations = 0
 
 # Use skip_list to specify that certain counties, or steps for specific counties
 # can be skipped to make processing faster. This is typically done when changes
